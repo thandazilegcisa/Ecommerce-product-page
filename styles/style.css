@@ -38,6 +38,18 @@
 * ? Mobile: 375px Desktop: 1440px
 **/
 
+
+/**
+* ! These styles are for the header navigation section:
+**/
+
+.menu-icon{
+    display: none;
+}
+.close-button{
+    display: none;
+}
+
 header{
     display: flex;
     flex-direction: row;
@@ -46,20 +58,20 @@ header{
     margin-top: 2rem;
     position: relative;
 }
-
-#navigation-element ul{
+.nav-desktop-active ul{
     position: relative;
-    right: 40%;
+    right: 4%;
     gap: 1.5rem;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.list-item a{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     text-align: center;
-    list-style: none;
     margin-top: 1rem;
-}
-
-.list-item a{
     text-decoration: none;
     color: var(--grayish-blue);
     font-weight: 400;
@@ -70,14 +82,14 @@ header{
 }
 .cart{
     position: relative;
-    left: 15em;
+    z-index: 0;
+    left: 12.5em;
     margin-right: 2rem;
     margin-top: 1em;
 }
 .avatar{
     width: 50%;
 }
-
 hr{
     margin-top: 1rem;
     width: 82%;
@@ -85,3 +97,65 @@ hr{
     color: var(--light-grayish-blue);
     opacity: 25%;
 }
+
+@media screen and  (min-width: 1280px) and (max-width: 1445px) {
+    .cart{
+        left: 12.5rem;
+    }
+}
+@media screen and  (min-width: 1080px) and (max-width: 1280px) {
+    .cart{
+        left: 7.5rem;
+    }
+}
+@media screen and  (min-width: 810px) and (max-width: 1080px) {
+    .cart{
+        left: 2.5rem;
+    }
+}
+@media screen and (max-width: 920px){
+    .menu-icon{
+        display: block;
+        margin: 1.24rem 1.25rem 0 1.25rem;
+    }
+    .cart{
+        left: 2.5rem;
+    }
+    hr{
+        display: none;
+    }
+    .nav-desktop-active ul{
+        display: none;
+    }
+
+    .nav-mobile-active ul{
+        margin-top: 0rem;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: -2rem;
+        left: 0rem;
+        flex-direction: column;
+    }
+    .nav-mobile-active ul li a{
+        position: relative;
+        top: 2.25rem;
+        margin-top: 5rem;
+        color: black;
+    }
+    .close-button{
+        display: block;
+        position: absolute;
+        z-index: 2;
+        margin-left: 2.25rem;
+        top: 1rem;
+        left: 2rem;
+    }
+}
+
+
+
+
