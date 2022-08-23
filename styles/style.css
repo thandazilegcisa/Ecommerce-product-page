@@ -1,3 +1,8 @@
+/**
+* ! Imports - Font Styles:
+**/
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;400&display=swap');
+
 :root{
     /**
     * ? Primary Colours: 
@@ -19,9 +24,64 @@
 }
 
 /**
-* ! The designs were created to the following widths:
-* ! Mobile: 375px Desktop: 1440px
+* ? Reset Browser Defaults:
 **/
-body{
-    font-size: 16px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**
+* ! The designs were created to the following widths:
+* ? Mobile: 375px Desktop: 1440px
+**/
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 2rem;
+    position: relative;
+}
+
+#navigation-element ul{
+    position: relative;
+    right: 40%;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.list-item a{
+    text-decoration: none;
+    color: var(--grayish-blue);
+    font-weight: 400;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.logo{
+    margin-top: 1rem;
+}
+.cart{
+    position: relative;
+    left: 15em;
+    margin-right: 2rem;
+    margin-top: 1em;
+}
+.avatar{
+    width: 50%;
+}
+
+hr{
+    margin-top: 1rem;
+    width: 82%;
+    transform: translateX(10%);
+    color: var(--light-grayish-blue);
+    opacity: 25%;
 }
