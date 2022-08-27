@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;400&display=swap');
+
+.main-content-container{
+    margin: 5rem 0rem 0rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 550px);
+    gap: 0rem;
+}
+.hero-section-image{
+    width: 85%;
+    border-radius: 1.25rem;
+}
+
+.headings{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.headings h1{
+    text-align: left;
+    color: var(--primary-orange);
+    margin-bottom: 1.5rem;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.headings h2{
+    text-align: left;
+    font-weight: 500;
+    font-size: 3rem;
+    width: 80%;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.product-description{
+    text-align: left;
+    line-height: 1.5rem;
+    width: 85%;
+    color: var(--dark-grayish-blue);
+    margin-bottom: 1.5rem;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.product-pricing{
+    font-size: 2rem;
+    font-family: 'Kumbh Sans', sans-serif; 
+    display: flex;
+    text-align: left;
+    margin-bottom: 0.25rem;
+}
+.discount{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-orange);
+    background-color: var(--primary-pale-orange);
+    padding: 0.55rem;
+    border-radius: 0.5rem;
+    margin-left: 2rem;
+    justify-content: right;
+}
+.original-price{
+    font-family: 'Kumbh Sans', sans-serif; 
+    text-decoration: line-through;
+    color: var(--grayish-blue);
+    margin-bottom: 1.25rem;
+}
+.cart-attributes-container{
+    display: flex;
+    flex-direction: row;   
+}
+.quantity-attribute{
+    background-color: var(--light-grayish-blue);
+    padding: 0.85rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    border-radius: 0.5rem;
+    margin-right: 2.5rem;
+}
+.minus-icon{
+    position: relative;
+    top: 0.5rem;
+}
+.plus-icon{
+    position: relative;
+    top: 0.2rem;
+}
+.add-to-cart-button{
+    background-color: var(--primary-orange);
+    padding: 0.85rem;
+    color: var(--light-grayish-blue);
+    display: flex;
+    justify-content:space-around;
+    border-radius: 0.5rem;
+    font-family: 'Kumbh Sans', sans-serif; 
+}
+.add-to-cart-button:hover{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+.cart-icon{
+    margin-right: 1.25rem;
+}
