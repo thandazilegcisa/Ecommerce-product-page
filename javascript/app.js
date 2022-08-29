@@ -24,3 +24,37 @@ menuIcon.addEventListener("click",function(){
 })
 
 console.log(navElement);
+
+const previousButton = document.getElementById("previous-button");
+const nextButton = document.getElementById("next-button");
+const imageTranslate = document.querySelectorAll(".hero-section-image");
+
+let clickCounter = 0;
+let clickCounterPrevious
+
+nextButton.addEventListener("click", function(){
+    clickCounter ++;
+    for(let i = 0; i < imageTranslate.length; i++){
+        if(clickCounter === 1){
+            imageTranslate[i].style.transform = "translate(-100%)"; 
+        }
+        else if(clickCounter === 2){
+            imageTranslate[i].style.transform = "translate(-200%)"; 
+        }
+        else if(clickCounter === 3){
+            imageTranslate[i].style.transform = "translate(-300%)"; 
+        }
+        else if(clickCounter > 3){
+            imageTranslate[i].style.transform = "translate(0%)";
+        }    
+    }
+    console.log("hello")
+})
+previousButton.addEventListener("click",function(){
+    clickCounterPrevious ++;
+    for(let i = 0; i < imageTranslate.length; i++){
+        if(clickCounter >= 0){
+            imageTranslate[i].style.transform = "translate(0%)"; 
+        }
+    }
+})
