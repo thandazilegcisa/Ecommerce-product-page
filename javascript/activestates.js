@@ -54,7 +54,8 @@ cart.addEventListener("mouseleave", function(){
  */
 
 const profileBorder = document.querySelector(".profile-border");
-avatar.addEventListener("mouseover",function(){
+avatar.addEventListener("click",function(){
+    
     profileBorder.style.display = "block";
 })
 avatar.addEventListener("mouseleave",function(){

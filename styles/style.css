@@ -77,6 +77,17 @@ header{
     font-weight: 400;
     font-family: 'Kumbh Sans', sans-serif;
 }
+/* 
+.list-item a::after{
+    content: "";
+    position: relative;
+    top: 3.5rem;
+    right: 4rem;
+    width: 75px;
+    height: 2px;
+    background-color: var(--primary-orange);
+
+} */
 .logo{
     margin-top: 1rem;
 }
@@ -95,19 +106,17 @@ header{
     background-color: var(--primary-orange);
     width: 1.5rem;
     border-radius: .85rem;
-}
-.profile-border{
-    position: absolute;
-    z-index: -1;
-    bottom: 1rem;
-    width: 100px;
-    height: 100px;
-    background-color: var(--primary-orange);
-    transition: display 10s;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 .avatar{
     width: 50%;
     cursor: pointer;
+}
+.avatar:hover{
+    border: 2.5px solid;
+    transition: border 80ms;
+    border-color: var(--primary-orange);
+    border-radius: 2.5rem;
 }
 hr{
     margin-top: 1rem;

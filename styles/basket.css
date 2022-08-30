@@ -20,3 +20,23 @@
 .basket-empty{
     margin-top: 2.25rem;
 }
+
+@media screen and (max-width: 920px){
+    .basket-container{
+        width: 95%;
+        height: 20rem;
+        margin: .5rem;
+        top: 5.5rem;
+        left: 0%;
+    }
+    .basket-heading{
+        position: relative;
+        right: 9.5rem;
+    }
+    .basket-empty{
+        margin-top: 7.25rem;
+    }
+    .hr{
+       display: block;
+    }
+}
