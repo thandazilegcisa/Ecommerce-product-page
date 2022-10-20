@@ -19,7 +19,7 @@ openLightBox.addEventListener("click",function(){
 
 lightbox.addEventListener("click", e =>{
     if(e.target !== e.currentTarget){
-        return
+        return;
     }
     lightbox.classList.remove("lightbox-overlay-container");
 })
@@ -33,9 +33,9 @@ lightboxContent.appendChild(imgSvgElement);
 imgSvgElement.setAttribute("src", "../images/icon-close.svg");
 imgSvgElement.className = "modal-exit-button";
 
-imgSvgElement.addEventListener("click",function(){
+imgSvgElement.addEventListener("click",function(e){
     lightbox.classList.remove("lightbox-overlay-container");
-    lightbox.style.display = "none";  
+    lightbox.style.display = "none";
 })
 console.log(imgSvgElement);
 

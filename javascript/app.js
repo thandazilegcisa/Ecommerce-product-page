@@ -58,3 +58,34 @@ previousButton.addEventListener("click",function(){
         }
     }
 })
+
+// Cart Functionality: 
+
+const quantityValue = document.querySelector(".quantity-amount-value");
+const svgPlusIcon = document.querySelector(".plus-icon");
+const svgMinusIcon = document.querySelector(".minus-icon");
+
+let valueCounter = 0;
+quantityValue.innerHTML = valueCounter;
+
+svgMinusIcon.addEventListener("click", () =>{
+    valueCounter --;
+
+    if (valueCounter >= 0){
+        quantityValue.innerHTML = valueCounter;
+    }
+    else{
+        return; 
+    }
+})
+
+svgPlusIcon.addEventListener("click", () =>{
+    valueCounter ++;
+
+    if(valueCounter >= 0){
+        quantityValue.innerHTML = valueCounter;
+    }
+    else{
+        return;
+    }
+})
