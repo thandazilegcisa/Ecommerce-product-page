@@ -10,11 +10,11 @@
   width: 30vw;
   border-radius: 1.25rem;
 }
-.previous-button-container{
-    display: none;
+.previous-button-container {
+  display: none;
 }
-.mobile-carousel{
-    display: none;
+.mobile-carousel {
+  display: none;
 }
 .headings {
   display: flex;
@@ -116,14 +116,14 @@
     display: grid;
     grid-template-columns: repeat(1, 920px);
   }
-  .desktop-image{
+  .desktop-image {
     display: none;
   }
   .hero-section-image {
     width: 100vw;
     border-radius: 0rem;
   }
-  .mobile-carousel{
+  .mobile-carousel {
     display: block;
     display: flex;
     flex-direction: row;
@@ -131,7 +131,7 @@
     width: 100vw;
     overflow-x: hidden;
   }
-  .previous-button-container{
+  .previous-button-container {
     display: block;
     position: absolute;
     transform: rotate(180deg);
@@ -143,14 +143,14 @@
     left: 5%;
     font-size: 50px;
   }
-  #next-button{
+  #next-button {
     left: 85%;
     transform: rotate(360deg);
   }
-  .previous-button{
+  .previous-button {
     transform: translate(40%, 30%);
   }
-  .next-button{
+  .next-button {
     position: absolute;
     /* background-color: var(--light-grayish-blue); */
     border-radius: 55%;
@@ -166,32 +166,32 @@
     font-style: inherit;
     width: 55vw;
   }
-  .product-description{
+  .product-description {
     width: 50%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
   }
-  .product-pricing .discount{
+  .product-pricing .discount {
     margin-left: 1rem;
   }
-  .original-price{
+  .original-price {
     margin-bottom: 2.5rem;
   }
-  .cart-attributes-container{
+  .cart-attributes-container {
     flex-direction: column;
     width: 75vw;
     position: relative;
     left: 2.5rem;
   }
-  .quantity-attribute{
+  .quantity-attribute {
     margin-bottom: 1.5rem;
   }
-  .add-to-cart-button{
+  .add-to-cart-button {
     width: 66.5vw;
     margin-bottom: 2.5rem;
   }
-  .cart-icon{
+  .cart-icon {
     margin-right: -10rem;
   }
 }
