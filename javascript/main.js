@@ -14,6 +14,7 @@ const sneakerItem = new cartItems(
 
 const renderItem = () => {
   return () => {
+    productArticle.setAttribute("id", `${sneakerItem.id}`)
     productArticle.innerHTML = `
         <!-- Headings -->
 
@@ -57,7 +58,9 @@ const renderItem = () => {
                         </svg>
 
                     <!-- Quantity Amount Value -->
-                    <p class="quantity-amount-value">0</p>
+
+                    <!-- Check for product type everytime we increment or decrement item -->
+                    <p id=${sneakerItem.id} class="quantity-amount-value">0</p>
 
                     <!-- Plus Icon -->
                         <svg
@@ -104,6 +107,10 @@ print();
 
 // Cart Functionality:
 
+/*
+    ? Icrement and Decrement the Quantity Value:
+*/
+
 const quantityValue = document.querySelector(".quantity-amount-value");
 const svgPlusIcon = document.querySelector(".plus-icon");
 const svgMinusIcon = document.querySelector(".minus-icon");
@@ -140,16 +147,31 @@ svgPlusIcon.addEventListener("click", () => {
 const addToCartButton = document.querySelector(".add-to-cart-button");
 addToCartButton.style.cursor = "pointer";
 
+/*
+    ? Main Objective: Push sneaker item and find out if the same value has already
+    ? been pushed if so only change the quantity of said item
+*/
+
 addToCartButton.addEventListener(
   "click",
-  () => {
-    if (arrayItems !== 0) {
-      arrayItems.push(sneakerItem);
+  () => {        
+      if (valueCounter <= 0){
+        return;
+      }
       const findName = arrayItems.find((x) => {
         return x.name === "Fall Limited Edition Sneakers";
       });
-      console.log(`Item with the name ${findName} already exists`);
-    }
+
+      if(findName === undefined && valueCounter > 0){
+        arrayItems.push({
+          name: sneakerItem.name,
+          quantity: valueCounter
+        });
+      } else if(findName){
+        findName.quantity += valueCounter;
+        console.log(`Item with the name ${findName} already exists`);
+      }
+      console.log(arrayItems);
   },
   false
 );
